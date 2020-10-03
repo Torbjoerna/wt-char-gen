@@ -18,7 +18,7 @@ const App = () => {
     
   return (
     <div style={{marginLeft:'80px', marginTop:'50px'}}>
-        <div style={{fontSize:'2rem', marginLeft:'250px'}}>Total: {total}</div>
+        <div style={{fontSize:'2rem', marginLeft:'250px'}}>Total cost: {total}</div>
         <table>
             <thead>
                 <tr>
@@ -29,6 +29,8 @@ const App = () => {
                     <td>Hyper d</td>
                     <td>Hyper hd</td>
                     <td>Hyper wd</td>
+                    <td>dice</td>
+                    <td>Cost</td>
                 </tr>
             </thead>
             <tbody>

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const StatSkillRow = ({id, setPoints}) => {
+    const [totalCost, setTotalCost] = useState(0);
     const [dice, setDice] = useState(1);
     const [hardDice, setHardDice] = useState(0);
     const [wiggleDice, setWiggleDice] = useState(0);
@@ -16,6 +17,7 @@ const StatSkillRow = ({id, setPoints}) => {
         total += hyperDice * 4;
         total += hyperHardDice * 8;
         total += hyperWiggleDice * 16;
+        setTotalCost(total);
         setPoints(total);
     });
 
@@ -54,6 +56,12 @@ const StatSkillRow = ({id, setPoints}) => {
         <strong> {hyperWiggleDice} </strong>
         <button onClick={() => setHyperWiggleDice(hyperWiggleDice+1)}>+</button>
         </td>
+        <td style={{width:'150px'}}>
+            <strong>{dice + hyperDice}d</strong>
+            {hardDice + hyperHardDice > 0 && <strong>+ {hardDice + hyperHardDice}hd</strong>}
+            {wiggleDice + hyperWiggleDice > 0 && <strong>+ {wiggleDice + hyperWiggleDice}wd</strong>}
+        </td>
+        <td>{totalCost} points</td>
     </tr>
     );
 }

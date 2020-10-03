@@ -46,6 +46,13 @@ table, th, td {
 }
 
 td {
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 80px;
   text-align: center;
+}
+
+button {
+  width: 25px;
+  height: 25px;
 }
